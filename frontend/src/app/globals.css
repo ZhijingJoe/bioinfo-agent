@@ -1,0 +1,152 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ── CNS 学术风格全局样式 ── */
+
+:root {
+  --cns-navy:       #1B3A5C;
+  --cns-navy-dark:  #0F2640;
+  --cns-navy-light: #2A5180;
+  --cns-red:        #8C1B2E;
+  --cns-red-light:  #B83A4E;
+  --cns-teal:       #2E5A5C;
+  --cns-teal-light: #468288;
+  --cns-gold:       #8B6914;
+  --cns-paper:      #FAFAF8;
+  --cns-cream:      #F5F3EE;
+  --cns-sand:       #EDE8DD;
+  --cns-ink:        #2C2C2C;
+  --cns-ink-light:  #6B6B6B;
+  --cns-ink-muted:  #99958D;
+  --cns-border:     #D4CFC4;
+  --cns-border-light: #E8E4DB;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background-color: var(--cns-cream);
+  color: var(--cns-ink);
+  font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans SC", system-ui, sans-serif;
+  font-size: 16px;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ── 学术风格滚动条 ── */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--cns-cream);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--cns-border);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--cns-ink-muted);
+}
+
+/* ── Markdown 学术渲染 ── */
+.prose-academic h1, .prose-academic h2, .prose-academic h3 {
+  font-family: "Noto Serif SC", "Source Han Serif SC", "Songti SC", Georgia, serif;
+  color: var(--cns-navy);
+  border-bottom: 1px solid var(--cns-border-light);
+  padding-bottom: 0.3em;
+  margin-top: 1.2em;
+  margin-bottom: 0.5em;
+}
+.prose-academic h1 { font-size: 1.5rem; }
+.prose-academic h2 { font-size: 1.25rem; }
+.prose-academic h3 { font-size: 1.1rem; }
+
+.prose-academic p {
+  margin: 0.6em 0;
+  line-height: 1.85;
+}
+
+.prose-academic code {
+  background: var(--cns-sand);
+  color: var(--cns-red);
+  padding: 0.15em 0.4em;
+  border-radius: 3px;
+  font-size: 0.9em;
+  font-family: "JetBrains Mono", "Fira Code", "SF Mono", monospace;
+}
+
+.prose-academic pre {
+  background: #1E1E2E;
+  color: #CDD6F4;
+  padding: 1em 1.2em;
+  border-radius: 6px;
+  overflow-x: auto;
+  margin: 0.8em 0;
+}
+
+.prose-academic pre code {
+  background: none;
+  color: inherit;
+  padding: 0;
+}
+
+.prose-academic blockquote {
+  border-left: 3px solid var(--cns-navy);
+  margin: 0.6em 0;
+  padding: 0.4em 1em;
+  background: var(--cns-paper);
+  color: var(--cns-ink-light);
+  font-style: italic;
+}
+
+.prose-academic ul, .prose-academic ol {
+  padding-left: 1.5em;
+  margin: 0.5em 0;
+}
+
+.prose-academic li {
+  margin: 0.2em 0;
+}
+
+.prose-academic table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 0.8em 0;
+}
+.prose-academic th {
+  background: var(--cns-navy);
+  color: white;
+  padding: 0.5em 0.8em;
+  font-weight: 600;
+}
+.prose-academic td {
+  border: 1px solid var(--cns-border);
+  padding: 0.4em 0.8em;
+}
+.prose-academic tr:nth-child(even) {
+  background: var(--cns-paper);
+}
+
+.prose-academic a {
+  color: var(--cns-navy);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+/* ── 打字机光标动画 ── */
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}
+.typing-cursor::after {
+  content: '▍';
+  animation: blink 0.8s infinite;
+  color: var(--cns-navy);
+}
