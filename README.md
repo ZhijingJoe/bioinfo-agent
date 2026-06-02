@@ -1,6 +1,6 @@
 # AI Academic Chat
 
-基于 **DeepSeek V4** 的学术风格 AI 对话助手，前端 Next.js + 后端 FastAPI。
+基于 **DeepSeek V4** 的学术AI 助手，前端 Next.js + 后端 FastAPI。
 
 
 | 色名 | 色值 | 用途 |
@@ -62,8 +62,8 @@ ai-academic-chat/
 │   │   └── app/
 │   │       ├── layout.tsx
 │   │       ├── page.tsx      # 主页面 + 对话组件
-│   │       └── globals.css   # 学术风格样式
-│   ├── tailwind.config.ts    # 色彩体系
+│   │       └── globals.css   # 样式
+│   ├── tailwind.config.ts    # 色彩
 │   ├── next.config.js        # API 代理
 │   └── package.json
 └── start.sh              # 一键启动脚本
